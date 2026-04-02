@@ -1,0 +1,56 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: #000000;
+  --foreground: #ffffff;
+  --gold: #f4c461;
+  --blue: #3356f6;
+  --gray: #f2f2f2;
+  --muted: rgba(255, 255, 255, 0.7);
+  --border: rgba(255, 255, 255, 0.1);
+  --radius: 2px;
+}
+
+@theme inline {
+  --font-sans: var(--font-inter), 'Inter', system-ui, sans-serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-gold: #f4c461;
+  --color-blue: #3356f6;
+  --color-gray: #f2f2f2;
+  --color-muted: rgba(255, 255, 255, 0.7);
+  --color-border: rgba(255, 255, 255, 0.1);
+  --radius-sm: calc(var(--radius));
+  --radius-md: calc(var(--radius) + 2px);
+  --radius-lg: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Golden spotlight effect */
+.golden-spotlight {
+  background: 
+    radial-gradient(ellipse 80% 50% at 0% 40%, rgba(244, 196, 97, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse 50% 80% at 10% 70%, rgba(244, 196, 97, 0.1) 0%, transparent 40%),
+    linear-gradient(135deg, rgba(244, 196, 97, 0.08) 0%, transparent 30%),
+    #000000;
+}
+
+.golden-spotlight-subtle {
+  background: 
+    radial-gradient(ellipse 60% 40% at 0% 50%, rgba(244, 196, 97, 0.1) 0%, transparent 50%),
+    #000000;
+}
