@@ -1,38 +1,38 @@
+import Image from "next/image"
+
 function StreamLogo() {
   return (
-    <div className="flex items-center gap-2">
-      <div className="flex flex-col gap-[2px]">
-        <div className="w-4 h-[1.5px] bg-white" />
-        <div className="w-4 h-[1.5px] bg-white" />
-        <div className="w-4 h-[1.5px] bg-white" />
-      </div>
-      <span className="text-white font-medium text-sm tracking-tight">stream</span>
-    </div>
+    <Image
+      src="/streamlogo.png"
+      alt="Stream logo"
+      width={1527}
+      height={329}
+      className="h-5 w-auto object-contain sm:h-6"
+    />
   )
 }
 
 function ReplitLogo() {
   return (
-    <div className="flex items-center gap-1.5">
-      <svg width="16" height="16" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M7 5.5C7 4.67157 7.67157 4 8.5 4H15.5C16.3284 4 17 4.67157 17 5.5V12H8.5C7.67157 12 7 11.3284 7 10.5V5.5Z" fill="#F26207"/>
-        <path d="M17 12H25.5C26.3284 12 27 12.6716 27 13.5V18.5C27 19.3284 26.3284 20 25.5 20H17V12Z" fill="#F5B200"/>
-        <path d="M7 21.5C7 20.6716 7.67157 20 8.5 20H17V26.5C17 27.3284 16.3284 28 15.5 28H8.5C7.67157 28 7 27.3284 7 26.5V21.5Z" fill="#0079F2"/>
-      </svg>
-      <span className="text-white font-medium text-sm">Replit</span>
-    </div>
+    <Image
+      src="/replit.png"
+      alt="Replit logo"
+      width={180}
+      height={180}
+      className="h-7 w-auto rounded-[3px] object-contain sm:h-8"
+    />
   )
 }
 
 function KFUPMLogo() {
   return (
-    <div className="flex items-center gap-1.5">
-      <svg width="18" height="18" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="16" cy="16" r="12" stroke="white" strokeWidth="1.5" fill="none"/>
-        <path d="M16 6L16 26M10 12L22 12M10 20L22 20" stroke="white" strokeWidth="1.5"/>
-      </svg>
-      <span className="text-white font-medium text-sm">KFUPM</span>
-    </div>
+    <Image
+      src="/kfupm.png"
+      alt="KFUPM logo"
+      width={380}
+      height={133}
+      className="h-7 w-auto object-contain sm:h-8"
+    />
   )
 }
 
