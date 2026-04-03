@@ -50,7 +50,7 @@ export function Hero() {
 
           {/* Main headline — cinematic film-title scale */}
           <h1 className="hero-title text-[42px] sm:text-[60px] lg:text-[78px] font-bold text-white tracking-tight leading-none mb-6">
-            STREAMTHON
+            STREAMATHON
           </h1>
 
           {/* Subtitle in gold, light weight */}
@@ -76,11 +76,6 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <div className="hero-scroll absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-20">
-        <span className="text-white/30 text-xs tracking-widest uppercase">Scroll</span>
-        <div className="w-px h-8 bg-white/15" />
-      </div>
     </section>
   )
 }

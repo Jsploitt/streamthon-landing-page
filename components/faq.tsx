@@ -5,9 +5,9 @@ import { Plus, Minus } from "lucide-react"
 
 const faqs = [
   {
-    question: "Who can participate in STREAMTHON?",
+    question: "Who can participate in STREAMATHON?",
     answer:
-      "STREAMTHON is open to undergraduate students enrolled in Saudi universities (Track 1) and developers, tech enthusiasts, and AI enthusiasts from across Saudi Arabia (Track 2).",
+      "STREAMATHON is open to undergraduate students enrolled in Saudi universities (Track 1) and developers, tech enthusiasts, and AI enthusiasts from across Saudi Arabia (Track 2).",
   },
   {
     question: "What technologies should I use?",

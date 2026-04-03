@@ -73,7 +73,7 @@ export function Footer() {
 
         {/* Copyright */}
         <p className="text-center text-white/30 text-sm">
-          © 2026 STREAMTHON. All rights reserved.
+          © 2026 STREAMATHON. All rights reserved.
         </p>
       </div>
     </footer>
