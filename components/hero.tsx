@@ -1,6 +1,8 @@
 import Link from "next/link"
 import FloatingLines from "./FloatingLines"
 
+const HERO_LINES_GRADIENT = ["#f4c461", "#000000", "#f4c461"]
+
 // Hero entrance animations are CSS-driven (globals.css .hero-* classes).
 // No GSAP dependency — guarantees content is always visible above the fold.
 
@@ -12,7 +14,7 @@ export function Hero() {
     >
       <div className="absolute inset-0 z-0 overflow-hidden">
         <FloatingLines
-          linesGradient={["#f4c461", "#000000", "#f4c461"]}
+          linesGradient={HERO_LINES_GRADIENT}
           animationSpeed={1}
           interactive
           bendRadius={3}
