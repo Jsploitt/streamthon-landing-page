@@ -206,6 +206,7 @@ void main() {
 `;
 
 const MAX_GRADIENT_STOPS = 8;
+const POINTER_EVENT_OPTIONS = { passive: true };
 
 function hexToVec3(hex) {
   let value = hex.trim();
@@ -236,8 +237,8 @@ export default function FloatingLines({
   enabledWaves = ['top', 'middle', 'bottom'],
   lineCount = [6],
   lineDistance = [5],
-  topWavePosition,
-  middleWavePosition,
+  topWavePosition = undefined,
+  middleWavePosition = undefined,
   bottomWavePosition = { x: 2.0, y: -0.7, rotate: -1 },
   animationSpeed = 1,
   interactive = true,
@@ -246,7 +247,7 @@ export default function FloatingLines({
   mouseDamping = 0.05,
   parallax = true,
   parallaxStrength = 0.2,
-  mixBlendMode = 'screen'
+  mixBlendMode = 'normal'
 }) {
   const containerRef = useRef(null);
   const targetMouseRef = useRef(new Vector2(-1000, -1000));
@@ -255,6 +256,14 @@ export default function FloatingLines({
   const currentInfluenceRef = useRef(0);
   const targetParallaxRef = useRef(new Vector2(0, 0));
   const currentParallaxRef = useRef(new Vector2(0, 0));
+
+  const linesGradientKey = Array.isArray(linesGradient) ? linesGradient.join('|') : '';
+  const enabledWavesKey = Array.isArray(enabledWaves) ? enabledWaves.join('|') : '';
+  const lineCountKey = Array.isArray(lineCount) ? lineCount.join('|') : String(lineCount);
+  const lineDistanceKey = Array.isArray(lineDistance) ? lineDistance.join('|') : String(lineDistance);
+  const topWavePositionKey = `${topWavePosition?.x ?? 10.0}|${topWavePosition?.y ?? 0.5}|${topWavePosition?.rotate ?? -0.4}`;
+  const middleWavePositionKey = `${middleWavePosition?.x ?? 5.0}|${middleWavePosition?.y ?? 0.0}|${middleWavePosition?.rotate ?? 0.2}`;
+  const bottomWavePositionKey = `${bottomWavePosition?.x ?? 2.0}|${bottomWavePosition?.y ?? -0.7}|${bottomWavePosition?.rotate ?? -1}`;
 
   const getLineCount = waveType => {
     if (typeof lineCount === 'number') return lineCount;
@@ -283,14 +292,21 @@ export default function FloatingLines({
     if (!container) return;
 
     let active = true;
+    let isDocumentVisible = true;
+    let isContainerInView = true;
 
     const scene = new Scene();
 
     const camera = new OrthographicCamera(-1, 1, 1, -1, 0, 1);
     camera.position.z = 1;
 
-    const renderer = new WebGLRenderer({ antialias: true, alpha: false });
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+    const renderer = new WebGLRenderer({
+      antialias: false,
+      alpha: false,
+      powerPreference: 'high-performance'
+    });
+    const dprCap = window.matchMedia('(pointer: coarse)').matches ? 1 : 1.5;
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, dprCap));
     renderer.domElement.style.width = '100%';
     renderer.domElement.style.height = '100%';
     container.appendChild(renderer.domElement);
@@ -392,36 +408,69 @@ export default function FloatingLines({
 
     if (ro) ro.observe(container);
 
+    const io =
+      typeof IntersectionObserver !== 'undefined'
+        ? new IntersectionObserver(
+            entries => {
+              isContainerInView = entries[0]?.isIntersecting ?? true;
+            },
+            { threshold: 0 }
+          )
+        : null;
+
+    if (io) io.observe(container);
+
+    const handleVisibilityChange = () => {
+      isDocumentVisible = document.visibilityState === 'visible';
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+
+    const resetPointerInteraction = () => {
+      targetInfluenceRef.current = 0.0;
+      if (parallax) targetParallaxRef.current.set(0, 0);
+    };
+
     const handlePointerMove = event => {
-      const rect = renderer.domElement.getBoundingClientRect();
+      const rect = container.getBoundingClientRect();
+      const width = rect.width || renderer.domElement.clientWidth || 1;
+      const height = rect.height || renderer.domElement.clientHeight || 1;
       const x = event.clientX - rect.left;
       const y = event.clientY - rect.top;
-      const dpr = renderer.getPixelRatio();
 
-      targetMouseRef.current.set(x * dpr, (rect.height - y) * dpr);
+      const isInside = x >= 0 && x <= width && y >= 0 && y <= height;
+      if (!isInside) {
+        resetPointerInteraction();
+        return;
+      }
+
+      const dpr = renderer.getPixelRatio();
+      targetMouseRef.current.set(x * dpr, (height - y) * dpr);
       targetInfluenceRef.current = 1.0;
 
       if (parallax) {
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
-        const offsetX = (x - centerX) / rect.width;
-        const offsetY = -(y - centerY) / rect.height;
+        const centerX = width / 2;
+        const centerY = height / 2;
+        const offsetX = (x - centerX) / width;
+        const offsetY = -(y - centerY) / height;
         targetParallaxRef.current.set(offsetX * parallaxStrength, offsetY * parallaxStrength);
       }
     };
 
-    const handlePointerLeave = () => {
-      targetInfluenceRef.current = 0.0;
-    };
-
     if (interactive) {
-      renderer.domElement.addEventListener('pointermove', handlePointerMove);
-      renderer.domElement.addEventListener('pointerleave', handlePointerLeave);
+      window.addEventListener('pointermove', handlePointerMove, POINTER_EVENT_OPTIONS);
+      window.addEventListener('pointerleave', resetPointerInteraction, POINTER_EVENT_OPTIONS);
+      window.addEventListener('blur', resetPointerInteraction);
     }
 
     let raf = 0;
     const renderLoop = () => {
       if (!active) return;
+
+      if (!isDocumentVisible || !isContainerInView) {
+        raf = requestAnimationFrame(renderLoop);
+        return;
+      }
 
       uniforms.iTime.value = clock.getElapsedTime();
 
@@ -449,10 +498,13 @@ export default function FloatingLines({
       cancelAnimationFrame(raf);
 
       if (ro) ro.disconnect();
+      if (io) io.disconnect();
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
 
       if (interactive) {
-        renderer.domElement.removeEventListener('pointermove', handlePointerMove);
-        renderer.domElement.removeEventListener('pointerleave', handlePointerLeave);
+        window.removeEventListener('pointermove', handlePointerMove, POINTER_EVENT_OPTIONS);
+        window.removeEventListener('pointerleave', resetPointerInteraction, POINTER_EVENT_OPTIONS);
+        window.removeEventListener('blur', resetPointerInteraction);
       }
 
       geometry.dispose();
@@ -465,13 +517,13 @@ export default function FloatingLines({
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [
-    linesGradient,
-    enabledWaves,
-    lineCount,
-    lineDistance,
-    topWavePosition,
-    middleWavePosition,
-    bottomWavePosition,
+    linesGradientKey,
+    enabledWavesKey,
+    lineCountKey,
+    lineDistanceKey,
+    topWavePositionKey,
+    middleWavePositionKey,
+    bottomWavePositionKey,
     animationSpeed,
     interactive,
     bendRadius,
