@@ -1,11 +1,13 @@
 const rules = [
-  "All participants must register through the official registration form before the deadline.",
-  "Teams can consist of 2–4 members. Solo participation is also allowed.",
-  "All projects must utilize Stream APIs and be built using Replit.",
-  "Projects must be original work created during the hackathon period.",
-  "Participants retain ownership of their intellectual property.",
-  "Final submissions must include a working demo and documentation.",
-]
+  "Teams must contain 4 - 5 members to participate.",
+  "The teams should be able to attend in-person as transportation is not supported.",
+  "Team members should be all male or all female.",
+  "Projects must be developed during the hackathon only. Any proof of previous coding on a prototype before the hackathon will lead to a disqualification immediately.",
+  "Pre-existing libraries and frameworks are allowed to be used.",
+  "The solution must utilize Stream's API in any possible way.",
+  "The prototype should be functional and a documented GitHub repo along a presentation should be submitted at the end of the contest.",
+  "Teams retain full ownership of their projects.",
+];
 
 export function Rules() {
   return (
@@ -37,5 +39,5 @@ export function Rules() {
         </div>
       </div>
     </section>
-  )
+  );
 }
