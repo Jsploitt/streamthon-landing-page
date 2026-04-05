@@ -14,9 +14,25 @@ export function About() {
             <p className="section-stagger text-lg sm:text-xl text-white/70 leading-relaxed mb-10 md:mb-12">
               Streamathon is an in-person hackathon where teams build a
               functional prototype during the event only. You can use any stack,
-              framework, or library, but your solution must use Stream&apos;s
-              API and Replit and should address a business model or fintech
-              idea.
+              framework, or library, but your solution must be built using{" "}
+              <a
+                href="https://replit.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gold hover:underline"
+              >
+                Replit
+              </a>{" "}
+              and{" "}
+              <a
+                href="https://getstream.io"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gold hover:underline"
+              >
+                Stream&apos;s API
+              </a>{" "}
+              to address a problem and monetize the solution.
             </p>
 
             <div className="section-stagger border-t border-white/10 pt-6">
@@ -30,9 +46,29 @@ export function About() {
               <p className="text-lg text-white mb-2">
                 <span className="text-gold">Location:</span> KFUPM, Building 68
               </p>
-              <p className="text-lg text-white">
+              <p className="text-lg text-white mb-2">
                 <span className="text-gold">Organized by:</span> Computer Club
                 and Student Fund at KFUPM
+              </p>
+              <p className="text-lg text-white">
+                <span className="text-gold">Sponsored by:</span>{" "}
+                <a
+                  href="https://getstream.io"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gold hover:underline"
+                >
+                  Stream
+                </a>
+                {" & "}
+                <a
+                  href="https://replit.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gold hover:underline"
+                >
+                  Replit
+                </a>
               </p>
             </div>
           </div>
