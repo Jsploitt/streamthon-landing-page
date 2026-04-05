@@ -65,7 +65,7 @@ export function Footer() {
 
         {/* Sponsored by line */}
         <p className="text-center text-white/40 text-sm mb-6">
-          Sponsored by <span className="text-white/60">STREAM × REPLIT</span>
+          Sponsored by <span className="text-white/60">Stream x Replit</span>
         </p>
 
         {/* Divider */}
@@ -73,7 +73,7 @@ export function Footer() {
 
         {/* Copyright */}
         <p className="text-center text-white/30 text-sm">
-          © 2026 STREAMATHON. All rights reserved.
+          © 2026 Streamathon. All rights reserved.
         </p>
       </div>
     </footer>
