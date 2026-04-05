@@ -82,9 +82,9 @@ export function FAQ() {
   return (
     <section id="faq" data-scroll-section className="pt-12 pb-16 md:pt-16 md:pb-24 bg-black">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="max-w-3xl">
+        <div className="max-w-3xl mx-auto">
           <div className="flex items-center gap-4 mb-8 md:mb-10">
-            <h2 className="section-heading text-3xl sm:text-[40px] lg:text-[44px] font-bold text-gold">
+            <h2 className="section-heading text-3xl sm:text-[40px] lg:text-[44px] font-medium text-gold">
               FAQs
             </h2>
             <div className="section-heading-line flex-1 h-px hidden sm:block" />

@@ -99,8 +99,7 @@ export function Navbar() {
 
             <Link
               href="#apply"
-              className="hidden sm:block bg-gold text-black px-5 py-2 text-sm font-medium transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_0_1px_rgba(244,196,97,0.35),0_12px_24px_rgba(244,196,97,0.2)]"
-              style={{ borderRadius: "2px" }}
+              className="hidden sm:block bg-gold text-black px-5 py-2 text-sm font-medium rounded-lg transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_0_1px_rgba(244,196,97,0.35),0_12px_24px_rgba(244,196,97,0.2)]"
             >
               Apply Now
             </Link>
@@ -133,8 +132,7 @@ export function Navbar() {
               <Link
                 href="#apply"
                 onClick={() => setIsOpen(false)}
-                className="bg-gold text-black px-5 py-3 text-sm font-medium text-center transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_0_1px_rgba(244,196,97,0.35),0_12px_24px_rgba(244,196,97,0.2)] mt-2"
-                style={{ borderRadius: "2px" }}
+                className="bg-gold text-black px-5 py-3 text-sm font-medium rounded-lg text-center transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_0_1px_rgba(244,196,97,0.35),0_12px_24px_rgba(244,196,97,0.2)] mt-2"
               >
                 Apply Now
               </Link>

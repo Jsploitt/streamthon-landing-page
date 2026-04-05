@@ -5,7 +5,7 @@ export function About() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="max-w-3xl">
             <div className="flex items-center gap-4 mb-8 md:mb-10">
-              <h2 className="section-heading text-3xl sm:text-[40px] lg:text-[44px] font-bold text-gold">
+              <h2 className="section-heading text-3xl sm:text-[40px] lg:text-[44px] font-medium text-gold">
                 THE BRIEF
               </h2>
               <div className="section-heading-line flex-1 h-px hidden sm:block" />
