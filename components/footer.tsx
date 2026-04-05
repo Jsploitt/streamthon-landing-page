@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Image from "next/image";
 
 function StreamLogo() {
   return (
@@ -9,7 +9,7 @@ function StreamLogo() {
       height={329}
       className="h-5 w-auto object-contain sm:h-6"
     />
-  )
+  );
 }
 
 function ReplitLogo() {
@@ -19,9 +19,9 @@ function ReplitLogo() {
       alt="Replit logo"
       width={180}
       height={180}
-      className="h-8 w-auto rounded-[3px] object-contain sm:h-10 lg:h-12"
+      className="h-12 w-auto object-contain sm:h-14"
     />
-  )
+  );
 }
 
 function KFUPMLogo() {
@@ -31,9 +31,9 @@ function KFUPMLogo() {
       alt="KFUPM logo"
       width={380}
       height={133}
-      className="h-7 w-auto object-contain sm:h-8"
+      className="h-11 w-auto object-contain sm:h-12"
     />
-  )
+  );
 }
 
 function ComputerClubLogo() {
@@ -43,9 +43,9 @@ function ComputerClubLogo() {
       alt="Computer Club logo"
       width={180}
       height={60}
-      className="h-8 w-auto object-contain sm:h-10 lg:h-12"
+      className="h-[60px] w-auto object-contain sm:h-[72px] lg:h-[84px]"
     />
-  )
+  );
 }
 
 export function Footer() {
@@ -77,5 +77,5 @@ export function Footer() {
         </p>
       </div>
     </footer>
-  )
+  );
 }
