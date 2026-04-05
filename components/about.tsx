@@ -43,6 +43,7 @@ export function About() {
             <iframe
               src="https://my.spline.design/pixeltextsetcopycopy-2FyNgWGtAsu6qENePHcwBnMX-JUI/"
               frameBorder="0"
+              loading="lazy"
               className="absolute top-0 left-0 w-full h-[calc(100%+80px)] pointer-events-auto"
               title="Spline 3D Animation"
             />
