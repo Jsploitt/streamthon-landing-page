@@ -18,25 +18,25 @@ export function CTA() {
           </p>
 
           <h2 className="section-heading text-[36px] sm:text-[48px] lg:text-[60px] font-bold text-white leading-tight mb-6">
-            Shape the future of
+            Apply to
             <br />
-            fintech in the Kingdom.
+            Streamathon 2026.
           </h2>
 
           <div className="section-heading-line h-px w-full max-w-md mx-auto mb-8" />
 
           <Link
-            href="https://forms.google.com/streamthon2026"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfreh5bIeGLaOlCDle6uecHngN1W54-jY4rBi69MizvsbpkWw/viewform"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-gold text-black px-10 py-4 text-base font-medium transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_0_1px_rgba(244,196,97,0.35),0_14px_30px_rgba(244,196,97,0.2)] mb-8"
             style={{ borderRadius: "2px" }}
           >
-            Register Now
+            Open Registration Form
           </Link>
 
           <p className="text-base text-white/40">
-            April&nbsp;15–16,&nbsp;2026
+            April 15-16, 2026 | KFUPM Building 68 | On-site only
           </p>
         </div>
       </div>

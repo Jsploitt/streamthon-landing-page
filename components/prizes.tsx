@@ -1,4 +1,4 @@
-import { Trophy, TrophyIcon } from "lucide-react"
+import { TrophyIcon } from "lucide-react"
 
 export function Prizes() {
   return (
@@ -35,10 +35,10 @@ export function Prizes() {
                     Cash Prizes
                   </p>
                   <p className="text-2xl sm:text-3xl font-bold text-white">
-                    SAR <span className="text-gold">50,000</span>
+                    SAR <span className="text-gold">40,000</span>
                   </p>
                   <p className="text-base text-white/70 mt-1">
-                    Distributed across winning teams
+                    Split between the university and developer tracks
                   </p>
                 </div>
               </div>
@@ -54,7 +54,23 @@ export function Prizes() {
                     Replit <span className="text-gold">Subscriptions</span>
                   </p>
                   <p className="text-base text-white/70 mt-1">
-                    Free subscriptions provided by Replit for the winners
+                    Provided to everyone accepted in Streamathon
+                  </p>
+                </div>
+              </div>
+
+              <div className="section-stagger group rounded-[2px] border border-white/10 bg-white/[0.01] p-6 md:p-7 transition-all duration-300 hover:-translate-y-1 hover:bg-white/[0.03] hover:border-gold/30 hover:shadow-[0_0_40px_-10px_rgba(255,215,0,0.15)] relative overflow-hidden opacity-100 z-20">
+                <div className="absolute inset-0 translate-x-full bg-gradient-to-l from-transparent via-white/5 to-transparent group-hover:animate-[shimmer_1.5s_infinite]" />
+
+                <div className="relative z-10">
+                  <p className="text-[13px] text-white/60 mb-2 tracking-widest uppercase">
+                    During The Event
+                  </p>
+                  <p className="text-2xl sm:text-3xl font-bold text-white">
+                    Mini Contests <span className="text-gold">And Merch</span>
+                  </p>
+                  <p className="text-base text-white/70 mt-1">
+                    Extra prizes and merchandise will be awarded during Streamathon
                   </p>
                 </div>
               </div>

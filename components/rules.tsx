@@ -1,10 +1,12 @@
 const rules = [
-  "All participants must register through the official registration form before the deadline.",
-  "Teams can consist of 2–4 members. Solo participation is also allowed.",
-  "All projects must utilize Stream APIs and be built using Replit.",
-  "Projects must be original work created during the hackathon period.",
-  "Participants retain ownership of their intellectual property.",
-  "Final submissions must include a working demo and documentation.",
+  "Teams must contain 4-5 members to participate.",
+  "Teams must be able to attend in person; transportation is not supported.",
+  "Team members must be all male or all female.",
+  "Projects must be developed during the hackathon only. Any proof of prior coding on a prototype before the hackathon will result in immediate disqualification.",
+  "Pre-existing libraries and frameworks are allowed.",
+  "The solution must utilize Stream's API in any possible way.",
+  "The final prototype must be functional, and teams must submit a documented GitHub repository along with a presentation at the end of the contest.",
+  "Teams retain full ownership of their projects.",
 ]
 
 export function Rules() {
@@ -14,7 +16,7 @@ export function Rules() {
         <div className="max-w-3xl">
           <div className="flex items-center gap-4 mb-8 md:mb-10">
             <h2 className="section-heading text-3xl sm:text-[40px] lg:text-[44px] font-bold text-gold">
-              RULES
+              RULES & ELIGIBILITY
             </h2>
             <div className="section-heading-line flex-1 h-px hidden sm:block" />
           </div>

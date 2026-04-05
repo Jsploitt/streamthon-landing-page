@@ -50,19 +50,19 @@ export function Hero() {
 
           {/* Main headline — cinematic film-title scale */}
           <h1 className="hero-title text-[42px] sm:text-[60px] lg:text-[78px] font-bold text-white tracking-tight leading-none mb-6">
-            STREAMATHON
+            Streamathon
           </h1>
 
           {/* Subtitle in gold, light weight */}
           <p className="hero-subtitle text-xl sm:text-2xl lg:text-[30px] font-light text-gold mb-8 leading-snug">
-            AI Applications in Fintech Hackathon
+            Fintech Hackathon | April 15-16
           </p>
 
           {/* Tagline */}
           <p className="hero-tagline text-base sm:text-lg text-white/70 max-w-lg mb-12 leading-relaxed">
-            Build innovative solutions using Stream APIs and Replit, powered by AI.
-            Sponsored by STREAM&nbsp;×&nbsp;REPLIT. Organized by the Computer Club
-            and the Student Fund at KFUPM.
+            Build any business or fintech solution using Stream&apos;s API. Streamathon is
+            on-site at KFUPM (Building 68), with Replit subscriptions for all accepted
+            participants. Organized by the Computer Club and the Student Fund at KFUPM.
           </p>
 
           {/* CTA */}
@@ -71,7 +71,7 @@ export function Hero() {
             className="hero-cta hero-apply-pulse inline-block bg-gold text-black px-8 py-4 text-base font-medium transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_0_1px_rgba(244,196,97,0.35),0_14px_28px_rgba(244,196,97,0.22)]"
             style={{ borderRadius: "2px" }}
           >
-            Apply Now
+            Apply to Streamathon
           </Link>
         </div>
       </div>

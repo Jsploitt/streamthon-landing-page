@@ -1,33 +1,74 @@
 "use client"
 
-import { useState } from "react"
+import { useState, type ReactNode } from "react"
 import { Plus, Minus } from "lucide-react"
 
-const faqs = [
+const faqs: { question: string; answer: ReactNode }[] = [
   {
-    question: "Who can participate in STREAMATHON?",
-    answer:
-      "STREAMATHON is open to undergraduate students enrolled in Saudi universities (Track 1) and developers, tech enthusiasts, and AI enthusiasts from across Saudi Arabia (Track 2).",
+    question: "When will the Streamathon take place?",
+    answer: "It will take place on April 15 and 16, with both days being on-site.",
   },
   {
-    question: "What technologies should I use?",
+    question: "What should I bring to the Streamathon?",
     answer:
-      "All projects must utilize Stream APIs for fintech solutions and be built using Replit as the development platform. You can use any programming language or framework supported by Replit.",
+      "Bring your laptop, chargers, any preferred development tools, and enthusiasm. Comfortable clothing is recommended for the long working hours.",
   },
   {
-    question: "Can I participate individually or do I need a team?",
-    answer:
-      "Both options are available. You can participate solo or form a team of 2–4 members. Team formation support will be available during the event.",
+    question: "Will there be meals provided during the Streamathon?",
+    answer: "Yes. Meals, snacks, and drinks will be available during all times of the contest.",
   },
   {
-    question: "What kind of projects should I build?",
+    question: "What is the difference between both application tracks?",
     answer:
-      "Projects should focus on innovative solutions, products, or tools in the fintech sector. Think about ways to build a smarter financial world and solve real challenges using AI and Stream's APIs.",
+      "The university students track is for university students across Saudi Arabia from all regions, while the developer track is for graduates or employees in the industry.",
   },
   {
-    question: "How will projects be judged?",
+    question: "Where will the Streamathon take place?",
+    answer: "It will take place at KFUPM, Building 68.",
+  },
+  {
+    question: "What technologies should I be using?",
     answer:
-      "Projects will be evaluated based on innovation, technical implementation, use of Stream APIs, potential impact in the fintech sector, and presentation quality.",
+      "You are free to use any technology stack or framework, as long as your solution uses Stream's API.",
+  },
+  {
+    question: "Who can join the developer track?",
+    answer:
+      "Anyone who is not a university student and is older than 18 years old with passion for coding is welcome to apply.",
+  },
+  {
+    question: "Can I join if I am not a KFUPM student?",
+    answer: "Students from all universities across all cities of Saudi Arabia are welcome to participate.",
+  },
+  {
+    question: "Will travel or transportation expenses be covered?",
+    answer:
+      "No, travel and transportation expenses are not covered. Students can seek sponsorship from their universities, and others can seek sponsorship from other entities or self-cover their trip.",
+  },
+  {
+    question: "What are the team requirements?",
+    answer: "Teams must contain 4-5 members, and all members should be either all male or all female.",
+  },
+  {
+    question: "Is the prize pool for each track or split between the tracks?",
+    answer: "The prize pool is split between both the university and developer tracks.",
+  },
+  {
+    question: "What should my solution be related to?",
+    answer: "Any business model or fintech idea that utilizes Stream's API is a valid solution.",
+  },
+  {
+    question: "Where can I read more about Stream and Replit?",
+    answer: (
+      <>
+        You can visit {" "}
+        <a href="https://streampay.sa" target="_blank" rel="noopener noreferrer" className="text-gold hover:underline">Stream&apos;s website</a>,{" "}
+        <a href="https://docs.streampay.sa" target="_blank" rel="noopener noreferrer" className="text-gold hover:underline">Stream&apos;s API documentation</a>,{" "}
+        and {" "}
+        <a href="https://replit.com" target="_blank" rel="noopener noreferrer" className="text-gold hover:underline">Replit&apos;s website</a>. You can also apply using the {" "}
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfreh5bIeGLaOlCDle6uecHngN1W54-jY4rBi69MizvsbpkWw/viewform" target="_blank" rel="noopener noreferrer" className="text-gold hover:underline">official registration form</a>.
+      </>
+    ),
   },
 ]
 
@@ -44,7 +85,7 @@ export function FAQ() {
         <div className="max-w-3xl">
           <div className="flex items-center gap-4 mb-8 md:mb-10">
             <h2 className="section-heading text-3xl sm:text-[40px] lg:text-[44px] font-bold text-gold">
-              FAQ
+              FAQs
             </h2>
             <div className="section-heading-line flex-1 h-px hidden sm:block" />
           </div>
