@@ -68,8 +68,7 @@ export function Hero() {
           {/* CTA */}
           <Link
             href="#apply"
-            className="hero-cta hero-apply-pulse inline-block bg-gold text-black px-8 py-4 text-base font-medium transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_0_1px_rgba(244,196,97,0.35),0_14px_28px_rgba(244,196,97,0.22)]"
-            style={{ borderRadius: "2px" }}
+            className="hero-cta hero-apply-pulse inline-block bg-gold text-black px-8 py-4 text-base font-medium rounded-lg transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_0_1px_rgba(244,196,97,0.35),0_14px_28px_rgba(244,196,97,0.22)]"
           >
             Apply to Streamathon
           </Link>
