@@ -58,15 +58,13 @@ export function Hero() {
 
           {/* Subtitle in gold, light weight */}
           <p className="hero-subtitle text-xl sm:text-2xl lg:text-[30px] font-light text-gold mb-8 leading-snug">
-            Fintech Hackathon | April 15-16
+            Creating scalable revenue solutions | April 15-16
           </p>
 
           {/* Tagline */}
           <p className="hero-tagline text-base sm:text-lg text-white/70 max-w-lg mb-12 leading-relaxed">
-            Build any business or fintech solution using Stream&apos;s API.
-            Streamathon is on-site at KFUPM (Building 68), with Replit
-            subscriptions for all accepted participants. Organized by the
-            Computer Club and the Student Fund at KFUPM.
+            Build any business or fintech solution using Replit and get paid
+            using Stream.
           </p>
 
           {/* CTA */}
