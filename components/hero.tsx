@@ -1,7 +1,8 @@
-import Link from "next/link"
-import FloatingLines from "./FloatingLines"
+import Link from "next/link";
+import Image from "next/image";
+import FloatingLines from "./FloatingLines";
 
-const HERO_LINES_GRADIENT = ["#f4c461", "#000000", "#f4c461"]
+const HERO_LINES_GRADIENT = ["#f4c461", "#000000", "#f4c461"];
 
 // Hero entrance animations are CSS-driven (globals.css .hero-* classes).
 // No GSAP dependency — guarantees content is always visible above the fold.
@@ -29,23 +30,25 @@ export function Hero() {
 
       <div className="relative z-20 max-w-7xl mx-auto px-6 lg:px-8 w-full py-20 md:py-24 lg:py-0">
         <div className="max-w-4xl">
-          {/* Pixel robot icon */}
-          <div className="hero-icon mb-10">
-            <svg
-              width="44"
-              height="44"
-              viewBox="0 0 48 48"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="text-gold"
-            >
-              <rect x="8" y="8" width="8" height="8" fill="currentColor" />
-              <rect x="32" y="8" width="8" height="8" fill="currentColor" />
-              <rect x="8" y="16" width="32" height="8" fill="currentColor" />
-              <rect x="16" y="24" width="16" height="8" fill="currentColor" />
-              <rect x="8" y="32" width="8" height="8" fill="currentColor" />
-              <rect x="32" y="32" width="8" height="8" fill="currentColor" />
-            </svg>
+          {/* Sponsor logos */}
+          <div className="hero-icon mb-10 flex items-center gap-4">
+            <Image
+              src="/streamlogo.png"
+              alt="Stream"
+              width={1527}
+              height={329}
+              priority
+              className="h-7 w-auto object-contain sm:h-8"
+            />
+            <div className="h-6 w-px bg-white/30" />
+            <Image
+              src="/replit.png"
+              alt="Replit"
+              width={180}
+              height={180}
+              priority
+              className="h-16 w-auto object-contain sm:h-20"
+            />
           </div>
 
           {/* Main headline — cinematic film-title scale */}
@@ -60,9 +63,10 @@ export function Hero() {
 
           {/* Tagline */}
           <p className="hero-tagline text-base sm:text-lg text-white/70 max-w-lg mb-12 leading-relaxed">
-            Build any business or fintech solution using Stream&apos;s API. Streamathon is
-            on-site at KFUPM (Building 68), with Replit subscriptions for all accepted
-            participants. Organized by the Computer Club and the Student Fund at KFUPM.
+            Build any business or fintech solution using Stream&apos;s API.
+            Streamathon is on-site at KFUPM (Building 68), with Replit
+            subscriptions for all accepted participants. Organized by the
+            Computer Club and the Student Fund at KFUPM.
           </p>
 
           {/* CTA */}
@@ -74,7 +78,6 @@ export function Hero() {
           </Link>
         </div>
       </div>
-
     </section>
-  )
+  );
 }

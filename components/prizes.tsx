@@ -1,12 +1,15 @@
-import { TrophyIcon } from "lucide-react"
+import { TrophyIcon } from "lucide-react";
 
 export function Prizes() {
   return (
-    <section id="prizes" data-scroll-section className="py-16 md:py-24 bg-black">
+    <section
+      id="prizes"
+      data-scroll-section
+      className="py-16 md:py-24 bg-black"
+    >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-
         {/* Centered heading */}
-        <div className="flex items-center justify-center gap-3 mb-10 md:mb-12">
+        <div className="flex items-center justify-start md:justify-center gap-3 mb-10 md:mb-12">
           <h2 className="section-heading text-3xl sm:text-[40px] lg:text-[44px] font-medium text-gold">
             PRIZES
           </h2>
@@ -47,11 +50,12 @@ export function Prizes() {
               Mini Contests <span className="text-gold">&amp; More</span>
             </p>
             <p className="text-base text-white/70">
-              Extra prizes, coupons, and merchandise up for grabs throughout Streamathon
+              Extra prizes, coupons, and merchandise up for grabs throughout
+              Streamathon
             </p>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
