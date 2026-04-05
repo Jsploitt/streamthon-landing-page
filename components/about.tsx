@@ -13,7 +13,7 @@ export function About() {
 
             <p className="section-stagger text-lg sm:text-xl text-white/70 leading-relaxed mb-10 md:mb-12">
               Participants will develop innovative solutions, products, or tools in the
-              fintech sector to build a smarter financial world — solving real challenges
+              fintech sector to build a smarter financial world, solving real challenges
               using Stream&apos;s APIs and Replit.
             </p>
 
