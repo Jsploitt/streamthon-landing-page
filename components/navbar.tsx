@@ -22,7 +22,7 @@ function StreamLogo() {
       width={1527}
       height={329}
       priority
-      className="h-4 w-auto sm:h-5 lg:h-6"
+      className="h-5 w-auto object-contain sm:h-6"
     />
   )
 }
@@ -46,20 +46,20 @@ function KFUPMLogo() {
       alt="KFUPM logo"
       width={380}
       height={133}
-      className="h-6 w-auto object-contain sm:h-7 lg:h-8"
+      className="h-7 w-auto object-contain sm:h-8"
     />
   )
 }
 
 function ComputerClubLogo() {
   return (
-    <div className="flex items-center gap-1.5">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="3" y="4" width="18" height="12" stroke="white" strokeWidth="1.5" fill="none"/>
-        <path d="M8 20H16M12 16V20" stroke="white" strokeWidth="1.5"/>
-      </svg>
-      <span className="text-white font-medium text-xs hidden lg:block">Computer Club</span>
-    </div>
+    <Image
+      src="/ccLogo.png"
+      alt="Computer Club logo"
+      width={180}
+      height={60}
+      className="h-8 w-auto object-contain sm:h-10 lg:h-12"
+    />
   )
 }
 
