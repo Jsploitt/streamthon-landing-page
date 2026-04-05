@@ -6,25 +6,28 @@ export function About() {
           <div className="max-w-3xl">
             <div className="flex items-center gap-4 mb-8 md:mb-10">
               <h2 className="section-heading text-3xl sm:text-[40px] lg:text-[44px] font-bold text-gold">
-                THE CHALLENGE
+                THE BRIEF
               </h2>
               <div className="section-heading-line flex-1 h-px hidden sm:block" />
             </div>
 
             <p className="section-stagger text-lg sm:text-xl text-white/70 leading-relaxed mb-10 md:mb-12">
-              Participants will develop innovative solutions, products, or tools in the
-              fintech sector to build a smarter financial world, solving real challenges
-              using Stream&apos;s APIs and Replit.
+              Streamathon is an in-person hackathon where teams build a functional
+              prototype during the event only. You can use any stack, framework, or
+              library, but your solution must use Stream&apos;s API and should address a
+              business model or fintech idea.
             </p>
 
             <div className="section-stagger border-t border-white/10 pt-6">
-              <p className="text-sm text-white/40 mb-2 tracking-wide uppercase">
-                Organized and supported by
+              <p className="text-sm text-white/40 mb-2 tracking-wide uppercase">Event Details</p>
+              <p className="text-lg text-white mb-2">
+                <span className="text-gold">Date:</span> April 15-16 (both days on-site)
+              </p>
+              <p className="text-lg text-white mb-2">
+                <span className="text-gold">Location:</span> KFUPM, Building 68
               </p>
               <p className="text-lg text-white">
-                <span className="text-gold">the Computer Club</span>
-                {" "}and{" "}
-                <span className="text-gold">the Student Fund at KFUPM</span>
+                <span className="text-gold">Organized by:</span> Computer Club and Student Fund at KFUPM
               </p>
             </div>
           </div>
