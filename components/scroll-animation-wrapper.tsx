@@ -35,6 +35,7 @@ export function ScrollAnimationWrapper({ children }: { children: ReactNode }) {
           y: 20,
           duration: 0.85,
           ease: "power3.out",
+          clearProps: "transform,opacity",
           scrollTrigger: {
             trigger: heading,
             ...triggerDefaults,
@@ -48,6 +49,7 @@ export function ScrollAnimationWrapper({ children }: { children: ReactNode }) {
           transformOrigin: "left center",
           duration: 0.85,
           ease: "power2.out",
+          clearProps: "transform",
           scrollTrigger: {
             trigger: line,
             ...triggerDefaults,
@@ -65,6 +67,7 @@ export function ScrollAnimationWrapper({ children }: { children: ReactNode }) {
           duration: 0.75,
           stagger: 0.1,
           ease: "power2.out",
+          clearProps: "transform,opacity",
           scrollTrigger: {
             trigger: section,
             ...triggerDefaults,
@@ -78,6 +81,7 @@ export function ScrollAnimationWrapper({ children }: { children: ReactNode }) {
           x: -90,
           duration: 0.9,
           ease: "power3.out",
+          clearProps: "transform,opacity",
           scrollTrigger: {
             trigger: card,
             ...triggerDefaults,
@@ -91,6 +95,7 @@ export function ScrollAnimationWrapper({ children }: { children: ReactNode }) {
           x: 90,
           duration: 0.9,
           ease: "power3.out",
+          clearProps: "transform,opacity",
           scrollTrigger: {
             trigger: card,
             ...triggerDefaults,
@@ -108,6 +113,7 @@ export function ScrollAnimationWrapper({ children }: { children: ReactNode }) {
             duration: 0.75,
             stagger: 0.1,
             ease: "power2.out",
+            clearProps: "transform,opacity",
             scrollTrigger: {
               trigger: rulesSection,
               ...triggerDefaults,
@@ -126,6 +132,7 @@ export function ScrollAnimationWrapper({ children }: { children: ReactNode }) {
             duration: 0.72,
             stagger: 0.1,
             ease: "power2.out",
+            clearProps: "transform,opacity",
             scrollTrigger: {
               trigger: faqSection,
               ...triggerDefaults,
@@ -141,12 +148,17 @@ export function ScrollAnimationWrapper({ children }: { children: ReactNode }) {
           scale: 1.05,
           duration: 0.9,
           ease: "power2.out",
+          clearProps: "transform,opacity",
           scrollTrigger: {
             trigger: ctaContent,
             ...triggerDefaults,
           },
         })
       }
+
+      // Refresh after fonts/layout settle to fix miscalculated trigger positions
+      const t = setTimeout(() => ScrollTrigger.refresh(), 250)
+      return () => clearTimeout(t)
     },
     { scope: scopeRef }
   )
