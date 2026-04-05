@@ -5,8 +5,7 @@ export function CTA() {
     <section
       id="apply"
       data-scroll-section
-      className="relative py-32 overflow-hidden"
-      style={{ backgroundColor: "#3356f6" }}
+      className="relative py-32 overflow-hidden bg-transparent"
     >
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
         <div className="cta-content text-center max-w-3xl mx-auto">
