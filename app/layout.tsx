@@ -9,10 +9,10 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'STREAMATHON - AI Applications in Fintech Hackathon',
-  description: 'Build innovative solutions using Stream APIs and Replit, powered by AI. Join the fintech hackathon organized by the Computer Club and the Student Fund at KFUPM. Cash prizes totaling SAR 50,000.',
+  title: 'Streamathon - Fintech Hackathon',
+  description: "Build fintech and business solutions with Stream's API at Streamathon on April 15-16 at KFUPM Building 68. Prize pool of SAR 40,000, Replit subscriptions for all accepted participants, plus mini contests and merchandise.",
   generator: 'v0.app',
-  keywords: ['hackathon', 'fintech', 'AI', 'Stream', 'Replit', 'KFUPM', 'Saudi Arabia'],
+  keywords: ['Streamathon', 'hackathon', 'fintech', 'Stream API', 'Replit', 'KFUPM', 'Saudi Arabia'],
   icons: {
     icon: [
       {
