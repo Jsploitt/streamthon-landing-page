@@ -12,22 +12,27 @@ export function About() {
             </div>
 
             <p className="section-stagger text-lg sm:text-xl text-white/70 leading-relaxed mb-10 md:mb-12">
-              Streamathon is an in-person hackathon where teams build a functional
-              prototype during the event only. You can use any stack, framework, or
-              library, but your solution must use Stream&apos;s API and should address a
-              business model or fintech idea.
+              Streamathon is an in-person hackathon where teams build a
+              functional prototype during the event only. You can use any stack,
+              framework, or library, but your solution must use Stream&apos;s
+              API and Replit and should address a business model or fintech
+              idea.
             </p>
 
             <div className="section-stagger border-t border-white/10 pt-6">
-              <p className="text-sm text-white/40 mb-2 tracking-wide uppercase">Event Details</p>
+              <p className="text-sm text-white/40 mb-2 tracking-wide uppercase">
+                Event Details
+              </p>
               <p className="text-lg text-white mb-2">
-                <span className="text-gold">Date:</span> April 15-16 (both days on-site)
+                <span className="text-gold">Date:</span> April 15-16 (both days
+                on-site)
               </p>
               <p className="text-lg text-white mb-2">
                 <span className="text-gold">Location:</span> KFUPM, Building 68
               </p>
               <p className="text-lg text-white">
-                <span className="text-gold">Organized by:</span> Computer Club and Student Fund at KFUPM
+                <span className="text-gold">Organized by:</span> Computer Club
+                and Student Fund at KFUPM
               </p>
             </div>
           </div>
@@ -35,9 +40,9 @@ export function About() {
           {/* Spline 3D Embed */}
           <div className="w-full h-[400px] lg:h-[600px] relative rounded-lg overflow-hidden pointer-events-none">
             {/* Increased offset to push the watermark completely out of view */}
-            <iframe 
-              src="https://my.spline.design/pixeltextsetcopycopy-2FyNgWGtAsu6qENePHcwBnMX-JUI/" 
-              frameBorder="0" 
+            <iframe
+              src="https://my.spline.design/pixeltextsetcopycopy-2FyNgWGtAsu6qENePHcwBnMX-JUI/"
+              frameBorder="0"
               className="absolute top-0 left-0 w-full h-[calc(100%+80px)] pointer-events-auto"
               title="Spline 3D Animation"
             />
@@ -45,5 +50,5 @@ export function About() {
         </div>
       </div>
     </section>
-  )
+  );
 }
