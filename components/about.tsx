@@ -53,7 +53,7 @@ export function About() {
               <p className="text-lg text-white">
                 <span className="text-gold">Sponsored by:</span>{" "}
                 <a
-                  href="https://getstream.io"
+                  href="https://streampay.sa"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gold hover:underline"
