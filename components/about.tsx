@@ -25,7 +25,7 @@ export function About() {
               </a>{" "}
               and{" "}
               <a
-                href="https://getstream.io"
+                href="https://docs.streampay.sa"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gold hover:underline"
